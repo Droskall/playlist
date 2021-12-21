@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="container">
+    <h1>Droskall Music</h1>
+    <img id="concert" src="playlist.jpg" alt="music">
+
+    <button id="createPlaylist"> + </button>
+    <div id="containerCreatePlaylist">
+        <label for="name">Nom de t'as playlist :</label>
+        <input type="text" id="name" required>
+        <label for="urlImage">Insère l'URL d'une image qui te plaît :</label>
+        <input type="text" id="urlImage" required>
+        <button id="enter1">Entrer</button>
+    </div>
+    <div id="musics">
+    </div>
+    <div id="containerCreateMusics">
+        <label for="title">Titre :</label>
+        <input type="text" id="title" required>
+        <label for="artist">Artiste :</label>
+        <input type="text" id="artist" required>
+        <label for="linkYtb">Lien de la chanson sur Youtube :</label>
+        <input type="text" id="linkYtb" required>
+        <label for="integrationVideo">La copie du code d'intégration de la vidéo (clique droit sur la vidéo) sur Youtube :</label>
+        <input type="text" id="integrationVideo" required>
+        <button id="enter2">Entrer</button>
+    </div>
+</div>
+<div id="video">
+</div>
+<div id="musicPlaylist">
+    <div id="containerSongs">
+        <div class="ligne"></div>
+        <div class="songs">
+            <p class="title">Titre</p>
+            <p class="artist">Artiste</p>
+            <p class="link">Lien YouTube</p>
+            <p class="play">Play</p>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
