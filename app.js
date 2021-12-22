@@ -1,32 +1,32 @@
 let containerMusics = $("#musics");
-let containerSongs = $("#containerSongs").first()
+let containerSongs = $("#containerSongs");
 let containerVideos = $("#video");
 let index = 0;
 let nbClick = 0;
 
-$("#createPlaylist").click(function () {
+$("#createPlaylist").click(() => {
     $("#containerCreatePlaylist").css("display", "flex");
 })
 
-$("#enter1").click(function () {
+$("#enter1").click(() => {
     let namePlaylist = $("#name").val();
-    let urlImage = $("#urlImage").val();
     index++;
     containerMusics.append(
         "<div class='playlists'>" +
-        "<img class='imageProj' src='"+ urlImage +"'>" +
+        "<img class='imageProj' src='"+ $("#urlImage").val() +"' alt='image'>" +
         "<button class='playPlaylist' id='playlist" + index + "'>" + namePlaylist + "</button>" +
         "<button id='ajoutPlaylist" + index + "'>+</button></div>"
     );
-    setTimeout(function () {
+
+    setTimeout(() => {
         $("#containerCreatePlaylist").css("display", "none");
     }, 1000)
 
-    $("#ajoutPlaylist" + index).click(function () {
+    $("#ajoutPlaylist" + index).click(() => {
         $("#containerCreateMusics").css("display", "flex");
     })
 
-    $("#enter2").click(function () {
+    $("#enter2").click(() => {
         let title = $("#title").val();
         let artist = $("#artist").val();
         let urlLink = $("#linkYtb").val();
@@ -37,13 +37,14 @@ $("#enter1").click(function () {
             "<div class='songs'>" +
             "<p class='title'>" + title + "</p>" +
             "<p class='artist'>" + artist + "</p>" +
-            "<a class='link' id='link" + index +"' href=''> Clique </a>" +
-            "<button class='play' id='play" + index + "'> Play </button>" +
+            "<a class='link' id='link" + index +"' href=''>Youtube</a>" +
+            "<button class='play' id='play" + index + "'>Play</button>" +
             "</div>"
         );
+
         $("#link" + index).attr("href", urlLink);
 
-        $("#play" + index).click(function (){
+        $("#play" + index).click(() =>{
             if(nbClick < 1){
                 containerVideos.append(videoLink);
                 containerVideos.css("display", "block");
@@ -54,7 +55,8 @@ $("#enter1").click(function () {
                 nbClick = 0;
             }
         })
-        setTimeout(function () {
+
+        setTimeout(() => {
             $("#containerCreateMusics").css("display", "none");
         }, 1000)
     });
